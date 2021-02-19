@@ -6,7 +6,7 @@ Generated from: (Python Container Action Template)[https://github.com/jacobtomli
 
 This action will gather the PR environment and check if the user that created the PR is in the Authorized users.
 
-If this succeeds after this action you could run other actions.
+If this check succeeds will return a 0 code, after this action you could run other actions.
 
 If it fails it will exit with error code 1.
 

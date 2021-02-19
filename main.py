@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 
+import os
 from github import Github
 
 
-def main(*args):
-    if len(args) != 4:
-        print("Wrong number of arguments")
-        return 1
-    _github_token = args[0]
-    _github_repo = args[1]
-    _github_pr = args[2]
-    _authorized = args[2]
+def main():
+    _github_token = os.getenv("GITHUB_TOKEN")
+    _github_repo = os.getenv("GITHUB_REPOSITORY")
+    _github_pr = os.getenv("PR_NUMBER")
+    _authorized = os.getenv("AUTHORIZED")
     repo = Github(_github_token).get_repo(_github_repo)
     pr = repo.get_pull(_github_pr)
 

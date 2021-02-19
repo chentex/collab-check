@@ -4,8 +4,3 @@ author: "Vicente Zepeda Mas"
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-  - ${{ secrets.GITHUB_TOKEN }}
-  - $GITHUB_REPOSITORY
-  - ${{ github.event.number }}
-  - ${{ secrets.AUTHORIZED }}
