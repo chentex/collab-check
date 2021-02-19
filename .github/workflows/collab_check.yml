@@ -1,0 +1,10 @@
+name: Collab check
+on: [pull_request]
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+    - uses: actions/checkout@master
+    - name: Run action
+      id: collab-check
+      uses: chentex/collab-check@master

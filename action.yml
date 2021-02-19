@@ -1,13 +1,11 @@
-name: "Python Container Action Template"
-description: "Get started with Python Container actions"
-author: "Jacob Tomlinson"
-inputs:
-  myInput:
-    description: "Input to use"
-    default: "world"
-outputs:
-  myOutput:
-    description: "Output from the action"
+name: "Collaborator check in python"
+description: "A GitHub Action to checl collaborators"
+author: "Vicente Zepeda Mas"
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+  - ${{ secrets.GITHUB_TOKEN }}
+  - $GITHUB_REPOSITORY
+  - ${{ github.event.number }}
+  - ${{ secrets.AUTHORIZED }}
