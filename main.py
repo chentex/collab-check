@@ -12,7 +12,7 @@ def main():
     repo = Github(_github_token).get_repo(_github_repo)
     pr = repo.get_pull(_github_pr)
 
-    _username = pr.user.name
+    _username = pr.user.login
 
     if _username in _authorized:
         exit(0)
