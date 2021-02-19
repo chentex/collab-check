@@ -15,10 +15,10 @@ def main():
     _username = pr.user.name
 
     if _username in _authorized:
-        return 0
+        exit(0)
 
     print(f"Unauhtorized user: {_username}")
-    return 1
+    exit(1)
 
 
 if __name__ == "__main__":
