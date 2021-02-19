@@ -10,6 +10,7 @@ If this check succeeds will return a 0 code, after this action you could run oth
 
 If it fails it will exit with error code 1.
 
+
 ### Example workflow
 
 ```yaml
